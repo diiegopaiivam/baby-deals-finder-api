@@ -5,21 +5,25 @@ Rails.application.routes.draw do
       devise_for :users,
         path: "auth",
         defaults: { format: :json },
+        path_names: {
+          sign_in: "sign_in",
+          sign_out: "sign_out",
+          registration: "sign_up"
+        },
         controllers: {
           registrations: "api/v1/auth/registrations",
           sessions: "api/v1/auth/sessions"
-        }
+        },
+        skip: [:passwords, :confirmations, :unlocks],
+        only: [:registrations, :sessions]
 
       namespace :auth do
         get  :me,      to: "me#show"
         post :refresh, to: "refresh#create"
-        # sign_out já é o destroy do devise session -> DELETE /auth/sign_out
       end
 
       resources :promos, only: %i[index show create update destroy] do
-        collection do
-          post :check_link
-        end
+        collection { post :check_link }
         member do
           post :verify
           post :report
