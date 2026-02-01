@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  original_price: 9.99
+  promo_price: 9.99
+  promo_type: 1
+  link: MyString
+  full_address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  expires_at: 2026-02-01 15:28:14
+  is_verified: false
+  product_brand: MyString
+  product_size: MyString
+  image_url: MyString
+  user: one
+  store: one
+
+two:
+  title: MyString
+  description: MyText
+  original_price: 9.99
+  promo_price: 9.99
+  promo_type: 1
+  link: MyString
+  full_address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  expires_at: 2026-02-01 15:28:14
+  is_verified: false
+  product_brand: MyString
+  product_size: MyString
+  image_url: MyString
+  user: two
+  store: two

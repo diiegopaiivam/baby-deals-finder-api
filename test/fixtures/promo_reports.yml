@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  promo: one
+  user: one
+  reason: MyString
+
+two:
+  promo: two
+  user: two
+  reason: MyString
